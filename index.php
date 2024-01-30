@@ -10,10 +10,15 @@
             $this->duration = $_duration;
             $this->genre = $_genre;
         }
+        public function movieOfTheWeek($movie){
+            return '<h2>Questa settimana ti consigliamo '.$movie.'.</h2>';
+        }
     }
 
     $potter_1 = new movie('Harry Potter e la pietra filosofale', 152, 'fantasy');
     $potter_1->vote = '8/10';
     $potter_2 = new movie('Harry Potter e la camera dei segreti', 161, 'fantasy');
     $potter_3 = new movie('Harry Potter e il prigioniero di Azkaban', 139, 'fantasy');
+
+    echo $potter_2->movieOfTheWeek($potter_2->title)
 ?>
